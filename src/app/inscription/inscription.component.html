@@ -1,0 +1,55 @@
+<div style="background-color: white;width: 500px;height: 550px;margin: auto;position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+text-align: center;-moz-box-shadow: 0 0 25px #000;
+-webkit-box-shadow: 0 0 25px #000;
+box-shadow: 0 0 25px #000;">
+    <div style="padding-top: 50px;">
+        <h2>Join us !</h2>
+        <br>
+        <form #inscriptionForm="ngForm" (ngSubmit)="onSubmit(inscriptionForm.value)">
+            <mat-form-field appearance="fill" style="width: 45%;">
+                <mat-label>First Name</mat-label>
+                <input name="firstName" ngModel matInput #input placeholder="Ex. John" required >
+                <mat-error *ngIf="firstName.invalid">{{getErrorEmptyFirstNameMessage()}}</mat-error>
+            </mat-form-field>
+            <span style="margin-right: 10px;"></span>
+            <mat-form-field appearance="fill" style="width: 45%;">
+                <mat-label>Last Name</mat-label>
+                <input name="lastName" ngModel matInput #input placeholder="Ex. Wall" required>
+                <mat-error *ngIf="lastName.invalid">{{getErrorEmptyLastNameMessage()}}</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" style="width: 92%;">
+                <mat-label>Enter your email</mat-label>
+                <input name="email" ngModel matInput placeholder="pat@example.com" required>
+                <mat-error *ngIf="email.invalid">{{getErrorEmailMessage()}}</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" style="width: 92%;" >
+                <mat-label>Enter your password</mat-label>
+                <input name="password" ngModel matInput [type]="hide ? 'password' : 'text'" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="password.invalid">{{getPasswordEmptyMessage()}}</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" style="width: 92%;" >
+                <mat-label>Confirm your password</mat-label>
+                <input name="passwordConfirm" ngModel matInput [type]="hideConfirm ? 'password' : 'text'" required>
+                <button mat-icon-button matSuffix (click)="hideConfirm = !hideConfirm" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hideConfirm ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="passwordConfirm.invalid ">{{getConfirmPasswordEmptyMessage()}}</mat-error>
+                <mat-error *ngIf="match">Password must match</mat-error>
+            </mat-form-field>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" style="width: 92%;margin:0 auto;
+            display:block;">Sign up</button>
+        </form>
+    </div>
+</div>
