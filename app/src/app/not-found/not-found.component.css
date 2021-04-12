@@ -1,0 +1,11 @@
+@media screen and (max-device-width:767px), screen and (max-width:767px) and (orientation: portrait) {
+    img {
+        width: 100%;
+    }
+}
+
+@media (orientation: landscape) {
+    img {
+        height: 60%;
+    }
+}

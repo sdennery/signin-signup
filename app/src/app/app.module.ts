@@ -8,31 +8,24 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConnectionComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    MatFormFieldModule,
     ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
     FormsModule,
-    MatIconModule,
-    MatButtonModule,
     HttpClientModule
   ],
   providers: [],

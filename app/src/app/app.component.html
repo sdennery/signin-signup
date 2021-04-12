@@ -1,7 +1,31 @@
-<nav class="navbar navbar-dark bg-dark shadow">
-  <div style="width: 100%;text-align: right;margin-right: 20px;">
-    <button type="button" [routerLink]="['/signin']" class="btn btn-outline-light" style="margin-right: 10px;">Sign in</button>
-    <button type="button" [routerLink]="['/signup']" class="btn btn-outline-light">Sign up</button>
+<nav class="navbar navbar navbar-dark bg-dark notMobile" *ngIf="isMobile == false" (window:resize)="onResize($event)">
+  <a class="navbar-brand">Logo</a>
+  <div class="btn-menu">
+    <a routerLink="/connexion" class="text-light no-text-decoration">Se connecter</a>
+    <a routerLink="/inscription" class="left-spacing">
+      <button type="button" class="btn-connect">S'inscrire</button>
+    </a>
+  </div>
+</nav>
+<nav class="navbar navbar-dark bg-dark mobile" *ngIf="isMobile == true" (window:resize)="onResize($event)">
+  <a class="navbar-brand">Logo</a>
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse" id="collapsingNavbar">
+      <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/connexion">Se connecter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/inscription">S'inscrire</a>
+        </li>
+      </ul>
   </div>
 </nav>
 <router-outlet></router-outlet>
+<footer class="page-footer font-small special-color-dark pt-4 bg-dark">
+  <div class="footer-copyright text-center text-light py-3">
+    <p>© 2021 Copyright - SD CORP</p>
+  </div>
+</footer>

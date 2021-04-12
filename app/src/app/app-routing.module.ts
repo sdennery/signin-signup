@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ConnectionComponent } from './connection/connection.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-  { path: 'signin', component: ConnectionComponent },
-  { path: 'signup', component: InscriptionComponent },
-  { path: '', component: InscriptionComponent }
+  { path: 'connexion', component: ConnectionComponent },
+  { path: 'inscription', component: InscriptionComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
