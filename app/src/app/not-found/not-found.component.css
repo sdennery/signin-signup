@@ -1,3 +1,15 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    height: -webkit-calc(100% - 136px);
+    height: -moz-calc(100% - 136px);
+    height: calc(100% - 136px);
+}
+
+
 @media screen and (max-device-width:767px), screen and (max-width:767px) and (orientation: portrait) {
     img {
         width: 100%;

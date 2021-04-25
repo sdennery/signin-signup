@@ -1,18 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: white!important;}
-
-.content {
-    height: 100%;
-    height: -webkit-calc(100% - 136px);
-    height: -moz-calc(100% - 136px);
-    height: calc(100% - 136px);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
 
 .btn-connect {
     margin: 0px 16px 0px 8px;

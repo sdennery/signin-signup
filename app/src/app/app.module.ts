@@ -12,12 +12,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
+import { PasswordForgottenComponent } from './password-forgotten/password-forgotten.component';
 @NgModule({
   declarations: [
     AppComponent,
     ConnectionComponent,
     InscriptionComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PasswordForgottenComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserAnimationsModule,
     ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RecaptchaModule,
+    RecaptchaFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

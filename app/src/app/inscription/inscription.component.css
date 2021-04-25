@@ -1,0 +1,110 @@
+input:hover {
+    border:1px solid #ced4da;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+        
+.btn-grad {background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)}
+.btn-grad {
+   text-align: center;
+   width: 100%;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+ .marg {
+    margin-top: 45px;
+    width: 90%;
+}
+
+.simple-marg {
+    margin-top: 25px;
+}
+
+.condition-utilisation {
+    font-size: 11px;
+}
+
+@media screen and (max-device-width:767px), screen and (max-width:767px) and (orientation: portrait) {
+    .content {
+        background-color: rgb(255, 255, 255);
+        height: -webkit-calc(100% - 123px);
+        height: -moz-calc(100% - 123px);
+        height: calc(100% - 123px);
+    }
+
+    .box {
+        background-color: white;
+        width: 90%;
+    }
+
+    .center-form {
+        display: block;
+        margin : 0 auto;
+    }
+}
+
+@media screen and (min-device-width:768px) and (max-device-width:1024px), screen and (min-width:768px) and (max-width:1024px) {
+    .content {
+        background-color: rgb(245, 245, 245);
+        height: -webkit-calc(100% - 123px);
+        height: -moz-calc(100% - 123px);
+        height: calc(100% - 123px);
+    }
+
+    .box {
+        background-color: white;
+        width: 500px;
+        margin-top: 180px;
+        margin-bottom: 180px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        -moz-box-shadow: 0 0 3px rgb(177, 177, 177);
+        -webkit-box-shadow: 0 0 3px rgb(177, 177, 177);
+        box-shadow: 0 0 3px rgb(177, 177, 177);
+    }
+
+    .center-form {
+        display: block;
+        margin : 0 auto;
+    }
+}
+
+@media screen and (min-device-width:1025px), screen and (min-width:1025px) {
+    .content {
+        background-color: rgb(245, 245, 245);
+        height: 100%;
+    }
+
+    .box {
+        background-color: white;
+        width: 500px;
+        margin-top: 180px;
+        margin-bottom: 180px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        -moz-box-shadow: 0 0 3px rgb(177, 177, 177);
+        -webkit-box-shadow: 0 0 3px rgb(177, 177, 177);
+        box-shadow: 0 0 3px rgb(177, 177, 177);
+    }
+
+    .center-form {
+        display: block;
+        margin : 0 auto;
+    }
+}
